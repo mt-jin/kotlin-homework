@@ -1,5 +1,3 @@
-import java.lang.Exception
-
 class HomeWork1Summary {
 
     fun summary(obj: Any?) =
@@ -13,4 +11,19 @@ class HomeWork1Summary {
             ?:throw Exception("obj is not a list, can not process")
 
 
+}
+object Main {
+    val homeWork1Summary = HomeWork1Summary()
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val objLong = listOf<String>("a","b","c","d","e","a","b","c","d","e","a","b","c","d","e")
+        val obj = listOf<String>("a","b","c")
+        val objEmpty = listOf<String>()
+
+//        homeWork1Summary.summary(obj)
+
+        val summaryJava = HomeWorkSummaryJava1()
+        summaryJava.summary(objEmpty)
+
+    }
 }
